@@ -1,0 +1,38 @@
+.container-principal{
+    padding-top: 9rem;
+}
+.grid{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+.grid > img{
+    max-width: 100%;
+}
+.page{
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0;
+}
+.page > h3{
+    margin: 0;
+    padding: 0 1rem;
+}
+.page > button{
+    border-radius: 2rem;
+    padding: .5rem;
+    border: 2px solid transparent;
+    margin: 0;
+    background-color: burlywood;
+    font-size: 1rem;
+    transition: all .5s ease-in-out;
+    cursor: pointer;
+}
+.page > button:hover{
+    background-color: brown;
+    border: 2px solid burlywood;
+}
+@media (min-width: 900px){
+    .grid{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
