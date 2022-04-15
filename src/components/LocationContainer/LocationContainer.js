@@ -24,19 +24,19 @@ const LocationContainer = ({url}) =>{
     }, [url])
 
     //? funcionalidad
-    const items = residents.slice(currentItems, itemsTotal)
+    const items = residents.slice(currentItems, itemsTotal) //* corte de una copia de los arreglos de items
 
 
-    const list = (items[0] ? items.map((resident) => <LocationInfo key={resident} url={resident} /> ) : 'Location alone')
-
+    const list = (items[0] ? items.map((resident) => <LocationInfo key={resident} url={resident} /> ) : <h2 className="alone">Location alone</h2>)
+    //* listado en funcion de los elementos si esta vacio regresa una location vacia
    
     const Prev = () =>{
         const prevPage = currentPage -1 
         const prevIndex = prevPage * 9
-        if(prevIndex <= 0 ){ return }
-        setCurrentPage(prevPage)
-        setCurrentItems(currentItems - 9)
-        setItemsToal(itemsTotal - 9)
+        if(prevIndex <= 0 ){ return } //? condicion para evitar que suba mas o menos de su valor
+        setCurrentPage(prevPage) //! generacion de la pagina 
+        setCurrentItems(currentItems - 9)   //! corte del slice  posicion inicial
+        setItemsToal(itemsTotal - 9) //! corte del slice posicion final
     }
     const Next = () =>{
         const totalItems = residents.length
@@ -44,9 +44,9 @@ const LocationContainer = ({url}) =>{
         const index = nextPage * 9
 
         if(index >= totalItems){ return }
-        setCurrentPage(nextPage)
-        setCurrentItems(currentItems + 9)
-        setItemsToal(itemsTotal + 9)
+        setCurrentPage(nextPage) //! generacion de la pagina 
+        setCurrentItems(currentItems + 9) //! corte del slice  posicion inicial
+        setItemsToal(itemsTotal + 9) //! corte del slice  posicion final
     }
 
     return(
@@ -61,4 +61,4 @@ const LocationContainer = ({url}) =>{
     )
 }
 
-export  default LocationContainer
+export default LocationContainer

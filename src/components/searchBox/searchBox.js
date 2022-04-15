@@ -7,7 +7,7 @@ const SearchBox = ({val, arr, sear, titleprop, titleInit}) =>{
     const [ titleRandom , setTitleRandom ] = useState('')
 
 
-    //*Funcionalidad condicional
+    //*Funcionalidad condicional para titulo aleatorio inicial
     useEffect(() =>{
         apiRyMplanet(titleInit).then((res)=>{
           setTitleRandom(res.data.name)
@@ -16,6 +16,7 @@ const SearchBox = ({val, arr, sear, titleprop, titleInit}) =>{
         })
     }, [titleInit])
 
+    //? renderizado de componentes
     return(
     <header className="header">
       <h2 className="title">{titleprop ? titleprop : titleRandom}</h2> 

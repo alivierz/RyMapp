@@ -3,6 +3,7 @@
     margin: 1rem;
     padding: 1rem;
     border-radius: 2rem;
+    transition: all .5s ease-in-out;
 }
 .container-card > h2{
     margin: 0 0 1rem 0;

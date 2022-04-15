@@ -1,6 +1,10 @@
 .container-principal{
     padding-top: 9rem;
 }
+.alone{
+    text-align: center;
+    color: white;
+}
 .grid{
     display: grid;
     grid-template-columns: 1fr;
