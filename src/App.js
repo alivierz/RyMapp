@@ -6,7 +6,7 @@ import LocationContainer from './components/LocationContainer/LocationContainer'
 
 function App() {
   //*generador aleatorio de locaciones iniciales
-    const randonNum = Math.floor((Math.random() * (126 - 0 + 1)) + 0)
+  const randonNum = Math.floor((Math.random() * (126 - 0 + 1)) + 0)
 
   //? Estados 
   const [ searching , setSearch ] = useState('')
@@ -20,7 +20,7 @@ function App() {
     apiLocation(searching).then((res) =>{
       setArrayLocation(res.data.results)
     }).catch((error) =>{
-      console.log(error)
+      console.error(error)
     })
   }, [searching])
 

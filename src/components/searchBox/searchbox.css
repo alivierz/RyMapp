@@ -26,6 +26,7 @@
     flex-direction: column;
     width: 70%;
     overflow: hidden;
+    border: 1px solid black;
 }
 .option-style{
     color: white;
@@ -41,4 +42,9 @@
 .title{
     color: white;
     margin: 1rem 0 0 0;
+}
+.info-zone{
+    display: flex;
+    justify-content: space-around;
+    color: white;
 }
